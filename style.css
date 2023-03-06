@@ -17,75 +17,95 @@ html {
 /* pre section */
 .section{
   padding-top: 150px;
+  padding-bottom:20px;
+  text-transform: uppercase;
+  font-family: Open Sans,BlinkMacSystemFont,
+    apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,
+    Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-style: italic;
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
 }
 .section2{
-  padding-top: 100px;
+  /* padding-top: 10px; */
+  height:25vh;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  /* background: #212121; */
+    /* background: rgba(27, 27, 27, 0.75); */
+    color: #fff;
+}
+.section .title::before{
+  content:"";
+  height:4px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  width: 600px;
+  background: rgb(241, 32, 32);
+  transform:translateX(-50%);
+}
+.section2 .title2::before{
+  content:"";
+  height:4px;
+  background-color: red;
+  position: absolute;
+  margin-top:70px;
+  width: 600px;
+  background: rgb(241, 32, 32);
+  transform:translateX(-50%);
+}
+.section .title::after {
+  content: "TOP 10";
+  position: absolute;
+    bottom: -52px;
+    left: 50%;
+    font-size: 100px;
+    color: rgb(2, 84, 161);
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.section2 .title2::after {
+  content: "Articles";
+  position: absolute;
+    /* bottom: -52px; */
+    left: 50%;
+    font-size: 100px;
+    color: rgb(2, 84, 161);
+    padding: 5px;
+    background:#fff;
+    transform: translateX(-50%);
 }
 .section .title ,.section2 .title2{
   position: relative;
   text-align: center;
-  font-size: 40px;
+  font-size: 100px;
   font-weight: 500;
-  /* margin-bottom: 40px; */
+  margin-bottom: 40px;
   padding-bottom: -20px;
-  font-family: "ubuntu", sans-serif;
+  font-family: Open Sans,BlinkMacSystemFont,
+  -apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,
+  Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
-.section .title::before {
-  content: " ";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 600px;
-  height: 3px;
-  background: rgb(241, 32, 32);
-  transform: translateX(-50%);
-}
-.section2 .title2::before {
-  content: " ";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 600px;
-  height: 3px;
-  background: rgb(241, 32, 32);
-  transform: translateX(-50%);
-}
-.section .title::after {
-  position: absolute;
-  bottom: -52px;
-  left: 50%;
-  font-size: 100px;
-  color: rgb(2, 84, 161);
-  padding: 5px;
-  background: #fff;
-  transform: translateX(-50%);
-}
-.section2 .title2::after {
-  position: absolute;
-  bottom: -52px;
-  left: 50%;
-  font-size: 100px;
-  color: rgb(2, 84, 161);
-  padding: 5px;
-  background: #fff;
-  transform: translateX(-50%);
-}
-.section .title::after {
-  content: "TOP 10";
-}
-.section2 .title2::after {
-  content: "Articles";
-}
+
 /* pre section */
 /* bar de navigation*/
 .navbar {
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 997;
   padding: 18px 0;
   font-family: "ubuntu", sans-serif;
+  font-size: 100%;
+  font:inherit;
   transition: all 0.3s ease;
-  background-color: rgb(2, 84, 161);
+  background-color:#333;
+  display:block;
 }
 
 .navbar .max-width {
@@ -170,7 +190,7 @@ nav button[type="submit"]:hover {
   text-align: center;
   line-height: 45px;
   color: white;
-  z-index: 9999;
+  z-index: 999;
   font-size: 30px;
   border-radius: 8px;
   cursor: pointer;
@@ -188,6 +208,7 @@ nav button[type="submit"]:hover {
   opacity: 1;
   bottom: 30px;
 }
+
 .etopia{
   height: 70px;
   margin-top: -20px;
@@ -211,6 +232,7 @@ nav button[type="submit"]:hover {
   height: 100vh;
   padding-left: 15px;
   font-family: "ubuntu", sans-serif;
+   /* background: #212121; */
 }
 
  .left {
@@ -222,11 +244,6 @@ nav button[type="submit"]:hover {
   margin-right: 20px;
   margin-bottom: 20px;
   overflow:hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
-  -23px 0 20px -23px rgba(0, 0, 0, .8),
-  23px 0 20px -23px rgba(0, 0, 0, .8),
-  inset 0 0 40px rgba(0, 0, 0, .1);
- 
 }
 .pgcv{
   width: 300px;
@@ -276,7 +293,7 @@ nav button[type="submit"]:hover {
   width:80%;
   transform: translate(-0%,50%);
   top:50%;
-  z-index:998;
+  z-index:995;
   font-family: "ubuntu", sans-serif;
   display:flex;
   flex-direction:column;
@@ -334,6 +351,10 @@ nav button[type="submit"]:hover {
   padding-top: 150px;
   display: flex;
   flex-direction: row;
+  /* background: #212121; */
+  font-family: Open Sans,BlinkMacSystemFont,
+  -apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,
+  Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 .left-section {
   width: 60%;
@@ -351,12 +372,12 @@ nav button[type="submit"]:hover {
 }
 .photo :hover{
  color:blue;
- font-size:28px; 
 }
 
 .right-section {
   width: 40%;
   background-color: #fff;
+  color:#333;
   padding-left: 20px;
   margin-left: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
@@ -365,33 +386,35 @@ nav button[type="submit"]:hover {
   inset 0 0 40px rgba(0, 0, 0, .1);
 }
 .right2-top{
-  height: 90vh;
+  height: 30vh;
 }
 .right2-top h2{
  margin-top: 40px;
 }
 .right2-bottom{
   height: 50%;
+  width:90%;
 }
 .button-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   margin-top:40px;
+  
 }
 
 .button {
-  padding: 5px;
-  background-color:rgb(48, 47, 47);
-  color: white;
+  padding: 10px;
+  background-color:transparent;
+  color: #333;
   font-size: 16px;
-  border: none;
+  border: 3px solid rgb(9, 22, 110);
   cursor: pointer;
-  border-radius: 5px;
 }
 
 .button:hover {
-  background-color: #3e8e41;
+  background-color: rgb(168, 7, 7,0.7);
+  font-size: 18px;
 }
  .right2-top ,.right2-bottom{
 
@@ -443,14 +466,14 @@ nav button[type="submit"]:hover {
 .social ul li {
   font-size:20px;
   cursor:pointer;
-  width:160px;
+  width:60px;
   margin-bottom:10px;
   padding:12px 0;
   text-align:center;
-  float:top;
+  float:left;
   display:block;
   height:22px;
-  border-radius:18px;
+  
 }
 
 .social ul li:hover {color:rgba(0,0,0,.5);}
@@ -504,34 +527,103 @@ li[class*="facebook"] {background:rgb(9, 22, 110);padding:12px 0;}
 
 /* footer styling */
 footer {
-  background: rgb(2, 84, 161);
+  background: #333;
   padding: 30px;
   color: #fff;
   text-align: center;
 }
 footer span a {
-  color:black;
+  color:#FFF;
   text-decoration: none;
-}
-footer span a:hover {
-  text-decoration: none;
-  font-size: 25px;
-}
-/* responsive */
-@media (max-width: 1300) {
-  .home .max-width {
-    margin-left: 0px;
-  }
-}
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
 }
 
-@media (max-width: 991px) {
-  .max-width {
+/* responsive */
+/* responsive bar de nav */
+@media (max-width: 947px){
+  .max-width{
     padding: 0 50px;
   }
+  .menu-btn {
+    display: block;
+    z-index:999;
+  }
+  .navbar .menu {
+    position:fixed;
+    height:100vh;
+    width:100%;
+    left:-100%;
+    top:0;
+    background:black;
+    text-align:center;
+    padding-top:80px;
+  }
+  .navbar .menu.active {
+    left:0;
+  }
+  .navbar .menu li{
+    display: block;
+  }
+  .navbar .menu li a{
+    display: inline-block; 
+    margin: 20px 0;
+    font-size: 25px;
+   
+  }
+  .section{
+    padding-top:130px;
+    padding-bottom:0px;
+  }
+  .section .title::before,.section2 .title2::before{
+    width:400px;
+  }
+
+  .section .title::after,.section2 .title2::after{
+    font-size:70px;
+  }
+
+  .conatiner{
+    height:80vh;
+  }
+ .left{
+  flex:240px;
+  height: 80%;
+ 
+ }
+ .rigth{
+ overflow:visible;
+ }
+ .rigth-top{
+  font-size:15px;
+  width:90%;
+  transform: translate(-20%,50%);
+ }
+ .pgct{
+  height:80%;
+  width:90%;
+  margin-right:70px;
+ }
+ .articles{
+  padding-top:20px;
+ }
+ .photo img{
+  width:180px;
+ }
+ .photo p {
+  font-size: 15px;
+  margin-left:30px;
+}
+.social{
+  align-items:left;
+}
+#wrapper {
+  width:250px;
+  
+}
+.social ul {
+  width: 200px
+}
+.social ul li {
+  width:30px;
+  height:18px;
+}
 }

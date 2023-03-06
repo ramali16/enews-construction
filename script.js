@@ -15,13 +15,10 @@ $(document).ready(function () {
   // Sélectionnez le conteneur carousel
 const carousel = document.querySelector('.left');
 
-// Sélectionnez toutes les images dans le carousel
 const images = carousel.querySelectorAll('img');
 
-// Définissez un index pour suivre la position de l'image actuelle
 let index = 0;
 
-// Définissez une fonction pour faire défiler les images automatiquement
 function autoScroll() {
   // Ajoutez la classe active pour afficher les images
   carousel.classList.add('active');
@@ -51,7 +48,7 @@ function autoScroll() {
 autoScroll();
 // coroussel
 
-  // bar de nav
+  // bar de recherche
   $(".scroll-up-btn").click(function () {
     $("html").animate({ scrollTop: 0 });
   });
