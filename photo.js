@@ -45,3 +45,8 @@ const searchForm = document.querySelector('nav form');
   searchForm.addEventListener('blur', function() {
   searchInput.classList.remove('active');
 });
+//menu
+$(".menu-btn").click(function () {
+  $(".navbar .menu").toggleClass("active");
+  $(".menu-btn i").toggleClass("active");
+});

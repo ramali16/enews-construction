@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800");
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,8 @@ html {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
+  font-family: 'Open Sans';
+  font-weight: 800;
 }
 /* pre section */
 .section{
@@ -46,6 +49,7 @@ html {
   position: absolute;
   left: 50%;
   width: 600px;
+  bottom: 10px;
   background: rgb(241, 32, 32);
   transform:translateX(-50%);
 }
@@ -62,12 +66,15 @@ html {
 .section .title::after {
   content: "TOP 10";
   position: absolute;
-    bottom: -52px;
+    bottom: -60px;
     left: 50%;
     font-size: 100px;
     color: rgb(2, 84, 161);
-    padding: 5px;
-    background: #fff;
+    padding: 7px;
+    background: transparent;
+    background: url(bg01.png),url(header.jpg);
+  background-position: top left, center center;
+    background-size: auto, cover;
     transform: translateX(-50%);
 }
 .section2 .title2::after {
@@ -99,13 +106,17 @@ html {
   position: fixed;
   width: 100%;
   z-index: 997;
-  padding: 18px 0;
+  /* padding: 18px 0; */
   font-family: "ubuntu", sans-serif;
   font-size: 100%;
   font:inherit;
   transition: all 0.3s ease;
-  background-color:#333;
+  /* background-color:#333; */
+  background-color: rgba(23, 25, 27, 0.9);
   display:block;
+  padding: 0.75em;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url(bg02.png);
+  
 }
 
 .navbar .max-width {
@@ -224,7 +235,12 @@ nav button[type="submit"]:hover {
 
 
 /* pg de garde */
- .container{
+ .container,.section{
+  background: url(bg01.png),url(header.jpg);
+  background-position: top left, center center;
+    background-size: auto, cover;
+ }
+.container{
   padding-top: 100px;
   display:flex;
   flex-direction:row;
@@ -232,6 +248,7 @@ nav button[type="submit"]:hover {
   height: 100vh;
   padding-left: 15px;
   font-family: "ubuntu", sans-serif;
+  
    /* background: #212121; */
 }
 
@@ -348,42 +365,86 @@ nav button[type="submit"]:hover {
 /* articles*/
 .articles{
   margin: 0;
-  padding-top: 150px;
+  padding-top:50px;
   display: flex;
   flex-direction: row;
   /* background: #212121; */
+  background-color: #fff;
+    background-image: url(bg03.png), url(bg02.png);
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 15em, auto auto;
+    background-position: top center, top left;
   font-family: Open Sans,BlinkMacSystemFont,
   -apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,
   Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 .left-section {
   width: 60%;
-  background-color: #fff;
+  background-color:transparent;
   padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  border-right: 8px solid black;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+  /* border-right: 8px solid black; */
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
   -23px 0 20px -23px rgba(0, 0, 0, .8),
   23px 0 20px -23px rgba(0, 0, 0, .8),
-  inset 0 0 40px rgba(0, 0, 0, .1);
+  inset 0 0 40px rgba(0, 0, 0, .1); */
 }
-.photo :hover{
+.photo{
+  display:flex;
+  flex-direction:row;
+  margin-bottom:25px;
+
+}
+.photo::before{
+  content:"";
+  height:1px;
+  background-color: red;
+  position: absolute;
+  width: 700px;
+  background: #696969;
+  margin-top:38vh;
+  margin-left:15px;
+
+}
+.photo p{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.photo h3{
+  font-size: 1.35em;
+}
+.date {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.065em;
+  font-size: 0.9em;
+  color: #696969;
+  margin: 0 0 0.25em 0;
+}
+.info{
+  margin-left: 20px;
+}
+/* .photo :hover{
  color:blue;
-}
+} */
 
 .right-section {
   width: 40%;
-  background-color: #fff;
+  background-color: transparent;
   color:#333;
   padding-left: 20px;
   margin-left: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
   -23px 0 20px -23px rgba(0, 0, 0, .8),
   23px 0 20px -23px rgba(0, 0, 0, .8),
-  inset 0 0 40px rgba(0, 0, 0, .1);
+  inset 0 0 40px rgba(0, 0, 0, .1); */
 }
 .right2-top{
   height: 30vh;
@@ -397,7 +458,7 @@ nav button[type="submit"]:hover {
 }
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 3fr);
   grid-gap: 10px;
   margin-top:40px;
   
@@ -432,14 +493,15 @@ nav button[type="submit"]:hover {
   position:relative;
   left:0;
   right:0;
-  margin: 30px auto;
+  margin-top: 30px ;
   width:420px;
 }
 
  .social {
   opacity:1;
   padding-top:20px;
-  padding-left:10px;
+  /* padding-left:10px; */
+  margin-left:-10px;
   transform-origin:50% 0%;
   opacity:1;
   transition:.5s;
@@ -511,16 +573,10 @@ li[class*="facebook"] {background:rgb(9, 22, 110);padding:12px 0;}
   justify-content: center;
 }
 .photo img {
-  width: 300px;
-  height: auto;
+  width: 200px;
+  height: 180px;
   object-fit: cover;
   margin-bottom: 10px;
-}
-.photo p  {
-  margin-left: 50px;
-  margin-top: 0px;
-  font-size: 20px;
-  text-align: auto;
 }
 /* articles*/
 
@@ -620,10 +676,10 @@ footer span a {
   
 }
 .social ul {
-  width: 200px
+  width: 300px
 }
 .social ul li {
-  width:30px;
+  width:40px;
   height:18px;
 }
 }
